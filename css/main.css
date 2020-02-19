@@ -51,6 +51,8 @@ h1,h2,h3,h4,h5,h6{
 }
 p{
 	font-family: 'Karla', sans-serif;
+	letter-spacing: 1px;
+    line-height: 24px;
 }
 .header{
 	width: 100vw;
@@ -60,11 +62,17 @@ p{
 	justify-content: center;
 }
 .header__container{
-	width: 768px;
+	width: 80%;
 	display: flex;
 	align-items: center;
 	font-family: 'Karla', sans-serif;
 	color: hsl(273, 4%, 51%);
+}
+@media screen and (max-width: 768px){
+	.header__container{
+		width: unset;
+	}
+	
 }
 .header__nav__container{
 	display: flex;
@@ -72,6 +80,12 @@ p{
 	position: relative;
 	margin-left: auto;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+	.header__nav__container{
+		display: none;
+	}
 }
 .header__nav__container > ul{
 	display: flex;
@@ -90,16 +104,23 @@ p{
 	align-items: center;
 	justify-content: space-between;
 }
+@media screen and (max-width: 768px){
+	.hero-image{
+		display: none;
+	}
+}
+
 .hero-container{
-	width: 768px;
+	width: 80%;
 	margin: auto;
 	color: #ffffff;
 	display: flex;
+	padding: 53px 0 0 0;
 }
 .hero-container-text{
 	display: block;
 	width: 80vw;
-	/*width: 60%;*/
+	padding: 0 10px 0 30px;
 }
 .hero-title{
 	margin: 57px auto 72px 0;
@@ -127,23 +148,51 @@ p{
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
+@media screen and (max-width: 375px){
+	.main-body-call-to-action{
+		margin-right: 11px;
+		font-size: 0.6em;
+	}
+}
 /*main-body*/
 .main-body{
-	width: 768px;
+	margin: auto;
+}
+.main-body-container{
+	width: 90%;
 	margin: auto;
 }
 .main-body-title{
 	font-size: 50px;
 	margin: 60px 0 80px 0;
 }
+@media screen and (max-width: 768px){
+	.main-body-title{
+		text-align: center;
+	}
+}
 .main-body-offerings{
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
 }
+@media screen and (max-width: 768px){
+	.main-body-offerings{
+		display: block;
+	}
+}
 .main-body-offering{
-	width: 33%;
+	width: 30%;
 	margin-bottom: 80px;
+}
+@media screen and (max-width: 768px){
+	.main-body-offering{
+		width: 90%;
+		margin: auto;
+		text-align: center;
+		margin-bottom: 44px;
+	}
+	
 }
 .offering-img{
 	width: 80px;
@@ -173,11 +222,18 @@ p{
 	font-size: 32px;
 	width: 280px;
 }
+@media screen and (max-width: 375px){
+	.main-body-banner-title{
+		padding-left: 13px;
+		font-size: 22px;
+	}
+	
+}
 .footer{
 	background-color: hsl(0, 0%, 98%)
 }
 .footer-container{
-	width: 768px;
+	width: 85%;
 	margin: auto;
 
 }
@@ -221,6 +277,14 @@ p{
 	text-transform: uppercase;
 	font-size: 12px;
 	font-family: 'Karla', sans-serif;
+}
+
+@media screen and (max-width:320px){
+	.footer-body{
+		font-size: 15px;
+		text-align: center;
+		display: block;
+	}
 }
 
 .footer-body-title{
